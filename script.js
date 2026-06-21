@@ -19,3 +19,16 @@ document.addEventListener("DOMContentLoaded", () => {
             : "Voir plus";
     });
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+    const btn = document.getElementById("voirPlusBtn2");
+    const section = document.getElementById("images-box");
+
+    btn.addEventListener("click", () => {
+        section.classList.toggle("open");
+
+        btn.textContent = section.classList.contains("open")
+            ? "Voir moins"
+            : "Voir plus";
+    });
+});
