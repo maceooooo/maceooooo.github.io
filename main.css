@@ -26,7 +26,30 @@ section > h2{
   margin-bottom: 10px;
 }
 
+button {
+  display: block;
+  margin: 30px auto;
+  padding: 10px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: white;
+  background-color: #2196F3;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
 
+button:hover {
+  background-color: #1976D2;
+  transform: translateY(-2px);
+}
+
+a:hover{
+  transform: translateY(-2px);
+  border-color: #666;
+  background-color: #b7c6d4;
+}
 
 
 /* Hero */
@@ -123,7 +146,8 @@ section > h2{
 
 /* Compétences*/
 .competences img{
-  width:200px;
+  width: 110px;
+  height: auto;
 }
 
 .competences {
@@ -135,17 +159,35 @@ section > h2{
 }
 
 .competences figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
   text-align: center;
-  width: 200px;
+  width: 120px;
 }
 
 .competences figcaption {
-  text-align: center  ;
-  margin-top: 8px;
+  text-align: center;
+  margin-top: auto;
   font-weight: bold;
   color: #222;
 }
 
+.competence-link {
+  text-decoration: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background-color 0.25s ease;
+  border-radius: 12px;
+  padding: 6px;
+}
+
+.php {
+  margin-top: 20%;
+}
+
+.cplus {
+  width: 80px !important;
+}
 
 /* Section projets */
 .projet {
@@ -153,6 +195,11 @@ section > h2{
   align-items: center;
   gap: 20px;
   margin-bottom: 25px;
+  transition: all 0.3s ease;
+}
+
+.projet p{
+  margin-top: 5px;
 }
 
 .projet img {
@@ -161,6 +208,24 @@ section > h2{
   border-radius: 6px;
 }
 
+.projet a {
+  display: inline-block;
+  padding: 6px 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  text-decoration: none;
+  margin-top: 10px;
+  color: #333;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+#projets.open .projet.hidden {
+  display: flex;
+}
 
 
 /* Formulaire contact */
@@ -205,22 +270,7 @@ form > p{
   margin: 25px 0px;
 } 
 
-/* Bouton envoyer */
-form button {
-  background-color: #2196F3;
-  border: none;
-  color: white;
-  padding: 10px 20px;
-  margin-left: 40%;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
 
-form button:hover {
-  background-color: #1976D2;
-}
 
 /* Contact - liste coordonnées */
 #contact > div{
@@ -249,18 +299,13 @@ form button:hover {
   gap: 10px;
   padding: 10px 2%;
   color: #222;
-  border:2px solid #222;
-  border-radius: 1;
+  border: 1px solid black;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
-  font-weight: bold;
-  transition: background-color 0.3s ease;
+  font-weight: bold; 
+  transition: transform 0.2s ease, border-color 0.2s ease;
   margin-top: 10px;
 }
-a:hover{
-  background-color: #b7c6d4;
-}
-  
 
 a img {
   width: 24px;  
